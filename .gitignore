@@ -209,4 +209,4 @@ jest-environment-node			xml-name-validator
 jest-get-type				y18n
 jest-haste-map				yallist
 jest-jasmine2				yargs
-jest-leak-detector			yargs-parser
+jest-leak-detector			yargs-parsernode_modules/
