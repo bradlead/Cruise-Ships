@@ -1,5 +1,5 @@
 /* eslint-env jest */
-const Port = require('../src/Ship.js');
+const Port = require('../src/Port.js');
 
 describe('Port', () => {
   it('can be intiated', () => {
