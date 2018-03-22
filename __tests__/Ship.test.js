@@ -30,6 +30,7 @@ describe('SetSail', () => {
     ship.setSail();
 
     expect(ship.currentPort).toBeFalsy();
+    expect(port.ships).not.toContain(ship);
   });
 });
 
@@ -42,6 +43,15 @@ describe('Dock', () => {
     ship.dock();
 
     expect(ship.currentPort).toBe(belfast);
+    expect(belfast.ships).toContain(ship);
   });
+});
+
+it('gets added to port on instantiation', () => {
+  const port = new Port('Monaco');
+  const itinerary = new Itinerary([port]);
+  const ship = new Ship(itinerary);
+
+  expect(port.ships).toContain(ship);
 });
 
