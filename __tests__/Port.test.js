@@ -11,7 +11,7 @@ describe('Port', () => {
 describe('addShip', () => {
   it('Adds a record of ships that have visited the port', () => {
     const port = new Port('Monaco');
-    const ship = {};
+    const ship = jest.fn();
     port.addShip(ship);
 
     expect(port.ships).toContain(ship);
@@ -21,8 +21,8 @@ describe('addShip', () => {
 describe('removeShip', () => {
   it('Removes the ship', () => {
     const port = new Port('Monaco');
-    const titanic = {};
-    const queenMary = {};
+    const titanic = jest.fn();
+    const queenMary = jest.fn();
 
     port.addShip(titanic);
     port.addShip(queenMary);
